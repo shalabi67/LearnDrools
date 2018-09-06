@@ -1,0 +1,9 @@
+package rules.xxx
+
+import com.learn.drool.data.Product;
+rule "price based on id"
+	when
+		productObject: Product(id>10)
+	then
+		productObject.setPrice(productObject.getId()*productObject.getId()*productObject.getId());
+	end
